@@ -11,7 +11,13 @@ public class Corriente extends Cuenta {
 	@Override
 	public void deposito(long valor) {
 		// TODO Auto-generated method stub
-		this.saldo+=valor;
+		if(valor>0) {
+			this.saldo+=valor;
+			System.out.println("Sobregiro: "+sobregiro+" Saldo: "+saldo);
+		}else {
+			System.out.println("No es posible depositar valores negativos");
+		}
+		
 	}
 
 	@Override
@@ -19,11 +25,17 @@ public class Corriente extends Cuenta {
 		// TODO Auto-generated method stub
 		if(valor>saldo)
 		{
-			this.sobregiro=sobregiro-(valor-saldo);
-			this.saldo=saldo-valor;
+			if(sobregiro>valor-saldo)
+			{
+				this.sobregiro=sobregiro-(valor-saldo);
+				this.saldo=saldo-valor;
+			}else {
+				System.out.println("No es posible realizar la operación");
+			}
 		}else{
 			this.saldo=saldo-valor;
 		}
+		System.out.println("Sobregiro: "+sobregiro+" Saldo: "+saldo);
 	}
 	
 }
