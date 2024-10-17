@@ -17,7 +17,13 @@ public class Corriente extends Cuenta {
 	@Override
 	public void retiro(long valor) {
 		// TODO Auto-generated method stub
-		
+		if(valor>saldo)
+		{
+			this.sobregiro=sobregiro-(valor-saldo);
+			this.saldo=saldo-valor;
+		}else{
+			this.saldo=saldo-valor;
+		}
 	}
 	
 }
