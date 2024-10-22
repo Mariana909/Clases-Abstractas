@@ -1,6 +1,6 @@
 package ejercicio2;
 
-public class Corriente extends Cuenta {
+public class Corriente extends Cuenta implements IDepositable,IRetirable{
 	private long sobregiro;
 
 	public Corriente(int numeroCuenta, String titular, long sobregiro) {
