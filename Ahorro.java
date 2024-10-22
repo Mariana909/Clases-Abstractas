@@ -1,6 +1,6 @@
 package ejercicio2;
 
-public class Ahorro extends Cuenta{
+public class Ahorro extends Cuenta implements IDepositable,IRetirable {
 	private long interes;
 
 	public Ahorro(int numeroCuenta, String titular) {
@@ -30,6 +30,5 @@ public class Ahorro extends Cuenta{
 			System.out.println("Saldo insuficiente");
 		}
 	}
-	
-	
+
 }
