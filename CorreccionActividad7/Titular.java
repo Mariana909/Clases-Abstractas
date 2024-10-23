@@ -1,9 +1,9 @@
 package ejercicio1;
 
 public class Titular {
-	protected String nombreT;
-	protected int idT;
-	protected String correoT;
+	private String nombreT;
+	private int idT;
+	private String correoT;
 	public Titular(String nombreT, int idT, String correoT) {
 		super();
 		this.nombreT = nombreT;
